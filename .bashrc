@@ -12,16 +12,21 @@ export CVS_SERVER='aklog cs.cmu.edu;cvs'
 alias cdProgramming="cd ~/Documents/CMU/Programming"
 alias cd15122="cd ~/Documents/CMU/ImperativeComputation"
 alias cd214="cd \"/Users/evans/Documents/CMU/16 Spring/15-214/ehauser\""
+alias cdCMU="cd \"/Users/evans/Documents/CMU/\""
+
 alias cdgit="cd ~/Documents/Personal/gitrepos"
 alias cdafs="cd /afs/andrew.cmu.edu/usr/ehauser"
 alias afssetup="kinit -f ehauser@ANDREW.CMU.EDU; \
   aklog ANDREW.CMU.EDU;"
 alias p3="cd /afs/andrew.cmu.edu/usr/ehauser/private/15410/p3"
 alias objdump="gobjdump"
-alias g="git"
 alias ogc='open -a Google\ Chrome --args --disable-web-security'
 alias pandora='/Applications/pianobar/pianobar'
 alias cddate='cd $(date +%Y-%m-%d)'
+
+alias g="git"
+alias s="screen"
+alias v="vim"
 
 #alias cmake="cmake -D CMAKE_PREFIX_PATH=/opt/local/lib/cmake"
 alias compile=="cmake . ; make"
@@ -30,6 +35,9 @@ export PATH=$PATH:/opt/local/bin/
 export PATH=$PATH:/opt/local/include/
 export PATH=$PATH:/usr/local/
 export PATH="$PATH:/usr/local/gradle/bin"
+export PATH="$PATH:/usr/local/android/bin"
+#/Users/evans/Documents/Personal/Programming/firefox/android/platform-tools/adb
+export PATH="$PATH:/Users/evans/Documents/personal/programming/firefox/android/platform-tools"
 
 
 copyToPoloSite(){

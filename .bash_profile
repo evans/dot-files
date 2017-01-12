@@ -10,6 +10,7 @@ export PATH=/opt/local/bin:/opt/local/sbin:$PATH
 # Finished adapting your PATH environment variable for use with MacPorts.
 
 
+
 ##
 # Your previous /Users/evans/.bash_profile file was backed up as /Users/evans/.bash_profile.macports-saved_2015-01-13_at_19:42:22
 ##

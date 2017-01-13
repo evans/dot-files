@@ -32,7 +32,6 @@ Plugin 'othree/javascript-libraries-syntax.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
-execute pathogen#infect()
 
 filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
@@ -46,12 +45,15 @@ filetype plugin indent on    " required
 "
 " see :h vundle for more details or wiki for FAQ
 
+au BufNewFile,BufRead .bash_local set filetype=sh
+execute pathogen#infect()
+
+
 " ========================
 " SOFT LINES (I'M A PUSSY)
 " Arrow keys move down soflines(multilines with no enter)
 " Or, use gj and gk to move down and up
 " ========================
-
 map <silent> <Up> gk
 imap <silent> <Up> <C-o>gk
 map <silent> <Down> gj
@@ -116,6 +118,7 @@ command Wq wq
 command W w
 command Q q
 
+" prevents scrolling
 set mouse=
 
 noremap <ScrollWheelUp>      <Nop>

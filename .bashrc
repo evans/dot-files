@@ -1,3 +1,7 @@
+if [ -f ~/.bash_local ]; then
+  source ~/.bash_local
+fi
+
 set editing-mode vi
 set show-mode-in-prompt on
 set colored-stats on
@@ -7,43 +11,23 @@ export GREP_OPTIONS='--color=auto' GREP_COLOR='1;32'
 export CLICOLOR=1
 export LSCOLORS=ExFxCxDxBxegedabagacad
 
-export CVS_SERVER='aklog cs.cmu.edu;cvs'
-
-alias cdProgramming="cd ~/Documents/CMU/Programming"
-alias cd15122="cd ~/Documents/CMU/ImperativeComputation"
-alias cd214="cd \"/Users/evans/Documents/CMU/16 Spring/15-214/ehauser\""
-alias cdCMU="cd \"/Users/evans/Documents/CMU/\""
-
-alias cdgit="cd ~/Documents/Personal/gitrepos"
-alias cdafs="cd /afs/andrew.cmu.edu/usr/ehauser"
-alias afssetup="kinit -f ehauser@ANDREW.CMU.EDU; \
-  aklog ANDREW.CMU.EDU;"
-alias p3="cd /afs/andrew.cmu.edu/usr/ehauser/private/15410/p3"
-alias objdump="gobjdump"
 alias ogc='open -a Google\ Chrome --args --disable-web-security'
-alias pandora='/Applications/pianobar/pianobar'
 alias cddate='cd $(date +%Y-%m-%d)'
 
 alias g="git"
 alias s="screen"
 alias v="vim"
+# long with human readable size and all files
+alias ll="ls -lhA"
 
 #alias cmake="cmake -D CMAKE_PREFIX_PATH=/opt/local/lib/cmake"
 alias compile=="cmake . ; make"
-export PATH=$PATH:/Users/evans/Documents/CMU/ImperativeComputation/cc0/bin
 export PATH=$PATH:/opt/local/bin/
 export PATH=$PATH:/opt/local/include/
 export PATH=$PATH:/usr/local/
 export PATH="$PATH:/usr/local/gradle/bin"
 export PATH="$PATH:/usr/local/android/bin"
-#/Users/evans/Documents/Personal/Programming/firefox/android/platform-tools/adb
-export PATH="$PATH:/Users/evans/Documents/personal/programming/firefox/android/platform-tools"
 
-
-copyToPoloSite(){
-    scp $1 ehauser@linux.andrew.cmu.edu:/afs/andrew.cmu.edu/org/cmumwp
-}
-alias copyToPoloSite=scpPolo
 
 #Color variables
 

@@ -13,3 +13,6 @@ do
   echo "linking "$(pwd)"/"$file" to ~/"$file""
   ln -s "$(pwd)""$file" ~/"$file"
 done
+
+#gcp
+curl https://sdk.cloud.google.com | bash

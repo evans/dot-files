@@ -118,6 +118,8 @@ command Wq wq
 command W w
 command Q q
 
+set nopaste
+
 " prevents scrolling
 set mouse=
 

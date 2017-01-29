@@ -1,6 +1,9 @@
 if [ -f ~/.bash_local ]; then
   source ~/.bash_local
 fi
+if [ -f ~/.bash_aliases ]; then
+  source ~/.bash_aliases
+fi
 
 set editing-mode vi
 set show-mode-in-prompt on
@@ -12,13 +15,6 @@ export CLICOLOR=1
 export LSCOLORS=ExFxCxDxBxegedabagacad
 
 alias ogc='open -a Google\ Chrome --args --disable-web-security'
-alias cddate='cd $(date +%Y-%m-%d)'
-
-alias g="git"
-alias s="screen"
-alias v="vim"
-# long with human readable size and all files
-alias ll="ls -lhA"
 
 #alias cmake="cmake -D CMAKE_PREFIX_PATH=/opt/local/lib/cmake"
 alias compile=="cmake . ; make"
@@ -27,7 +23,6 @@ export PATH=$PATH:/opt/local/include/
 export PATH=$PATH:/usr/local/
 export PATH="$PATH:/usr/local/gradle/bin"
 export PATH="$PATH:/usr/local/android/bin"
-
 
 #Color variables
 

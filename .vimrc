@@ -46,6 +46,7 @@ filetype plugin indent on    " required
 " see :h vundle for more details or wiki for FAQ
 
 au BufNewFile,BufRead .bash_local set filetype=sh
+au BufNewFile,BufRead .bash_aliases set filetype=sh
 execute pathogen#infect()
 
 

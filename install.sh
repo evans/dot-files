@@ -27,5 +27,10 @@ git clone git://github.com/tpope/vim-repeat.git ~/.vim/bundle/vim-repeat
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 vim +PluginInstall +qall
 
-#gcp
-curl https://sdk.cloud.google.com | bash
+read -p "Would you like to install gcp(Google Cloud Platform)[yY]? " -r
+echo # move to a new line
+if [[ $REPLY =~ ^[Yy] ]]
+then
+  #gcp
+  curl https://sdk.cloud.google.com | bash
+fi

@@ -47,6 +47,7 @@ filetype plugin indent on    " required
 
 au BufNewFile,BufRead .bash_local set filetype=sh
 au BufNewFile,BufRead .bash_aliases set filetype=sh
+au BufNewFile,BufRead *.sig set filetype=sml
 execute pathogen#infect()
 
 
@@ -70,6 +71,7 @@ set encoding=utf-8 "UTF-8 character encoding
 set tabstop=2  "4 space tabs
 set shiftwidth=2  "4 space shift
 set softtabstop=2  "Tab spaces in no hard tab mode
+
 set expandtab  " Expand tabs into spaces
 set autoindent  "autoindent on new lines
 set showmatch  "Highlight matching braces
@@ -101,6 +103,12 @@ autocmd BufWritePre * :%s/\s\+$//e
 
 " Syntax highlighting and stuff
 syntax on
+
+"Line Numbers
+set number
+
+"Errors on line longer than 80 characters
+2mat ErrorMsg '\%80v.'
 
 " Vavious LaTex Settings
 autocmd FileType tex call Tex_SetTeXCompilerTarget('View','pdf')

@@ -10,8 +10,11 @@ ln -s "$(pwd)"/.config/git/ignore ~/.config/git/ignore
 files=($(find . -name ".*" -type f | sed "s|^\./||"))
 for file in "${files[@]}"
 do
-  echo "linking "$(pwd)"/"$file" to ~/"$file""
-  ln -s "$(pwd)"/"$file" ~/"$file"
+  if [[ "$file" != ".gitignore" ]]
+  then
+    echo "linking "$(pwd)"/"$file" to ~/"$file""
+    ln -s "$(pwd)"/"$file" ~/"$file"
+  fi
 done
 
 #https://github.com/tpope/vim-pathogen

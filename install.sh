@@ -39,6 +39,9 @@ vim -u NONE -c "helptags ~/.vim/bundle/vim-capslock/doc" -c q
 git clone https://github.com/roryokane/detectindent.git ~/.vim/bundle/detectindent
 vim -u NONE -c "helptags ~/.vim/bundle/detectindent/doc" -c q
 
+#vimperator syntax highlighting
+git clone https://github.com/vimperator/vimperator.vim.git ~/.vim/bundle/vimperator.vim
+
 git clone git://github.com/godlygeek/tabular.git ~/.vim/bundle/tabular
 
 #https://github.com/VundleVim/Vundle.vim

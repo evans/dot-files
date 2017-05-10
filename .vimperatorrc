@@ -1,0 +1,6 @@
+"search/suggest engine: google
+set defsearch=google
+set suggestengines=google
+
+
+set incsearch

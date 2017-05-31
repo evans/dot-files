@@ -19,11 +19,14 @@ Plugin 'jelera/vim-javascript-syntax'
 Plugin 'pangloss/vim-javascript'
 "highights indents
 Plugin 'nathanaelkane/vim-indent-guides'
+"highights indents for jsx
+Plugin 'mxw/vim-jsx'
 "Adds closing brace
 Plugin 'Raimondi/delimitMate'
 "Arduino
 Plugin '4Evergreen4/vim-hardy'
 let delimitMate_expand_cr = 1
+let g:jsx_ext_required = 0
 
 "Highlighting for common libraries
 "https://github.com/othree/javascript-libraries-syntax.vim

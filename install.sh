@@ -30,6 +30,10 @@ vim -u NONE -c "helptags ~/.vim/bundle/vim-surround/doc" -c q
 git clone git://github.com/tpope/vim-fugitive.git ~/.vim/bundle/vim-fugitive
 vim -u NONE -c "helptags ~/.vim/bundle/vim-fugitive/doc" -c q
 
+#:Gbrowse
+git clone https://github.com/tpope/vim-rhubarb.git ~/.vim/bundle/vim-rhubarb
+vim -u NONE -c "helptags ~/.vim/bundle/vim-rhubarb/doc" -c q
+
 # gC
 # :help capslock
 git clone git://github.com/tpope/vim-capslock.git ~/.vim/bundle/vim-capslock
@@ -57,3 +61,9 @@ vim +PluginInstall +qall
 #   #gcp
 #   curl https://sdk.cloud.google.com | bash
 # fi
+
+#install homebrew
+if [[ "$OSTYPE" == "darwin"* ]]; then
+  # Mac OSX
+  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+fi

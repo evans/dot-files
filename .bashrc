@@ -57,3 +57,5 @@ export HISTSIZE=
 export HISTCONTROL=ignorespace
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+
+#export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"

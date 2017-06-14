@@ -45,6 +45,8 @@ vim -u NONE -c "helptags ~/.vim/bundle/detectindent/doc" -c q
 
 #vimperator syntax highlighting
 git clone https://github.com/vimperator/vimperator.vim.git ~/.vim/bundle/vimperator.vim
+#typescript sytax highlighting
+git clone https://github.com/leafgarland/typescript-vim.git ~/.vim/bundle/typescript-vim
 
 git clone git://github.com/godlygeek/tabular.git ~/.vim/bundle/tabular
 
@@ -67,3 +69,5 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
   # Mac OSX
   /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
+
+#curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh | bash

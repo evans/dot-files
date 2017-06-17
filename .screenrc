@@ -12,4 +12,8 @@ bind F eval "hardstatus alwayslastline"
 
 defscrollback 100000
 
+altscreen "on"
+defbce "on"
+term screen-256color
+
 shell -/bin/bash

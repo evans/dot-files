@@ -135,6 +135,10 @@ set nopaste
 " prevents scrolling
 set mouse=
 
+set background=dark
+let g:solarized_termcolors = 256
+colorscheme solarized
+
 noremap <ScrollWheelUp>      <Nop>
 noremap <S-ScrollWheelUp>    <Nop>
 noremap <C-ScrollWheelUp>    <Nop>

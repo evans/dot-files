@@ -56,6 +56,9 @@ git clone git://github.com/godlygeek/tabular.git ~/.vim/bundle/tabular
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 vim +PluginInstall +qall
 
+git clone git://github.com/altercation/vim-colors-solarized.git ~/.vim/bundle/vim-colors-solarized
+
+
 # read -p "Would you like to install gcp(Google Cloud Platform)[yY]? " -r
 # echo # move to a new line
 # if [[ $REPLY =~ ^[Yy] ]]

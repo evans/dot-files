@@ -137,7 +137,8 @@ set mouse=
 
 set background=dark
 let g:solarized_termcolors = 256
-colorscheme solarized
+"colorscheme solarized
+color basic-dark
 
 noremap <ScrollWheelUp>      <Nop>
 noremap <S-ScrollWheelUp>    <Nop>

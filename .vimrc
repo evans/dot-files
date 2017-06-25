@@ -137,8 +137,13 @@ set mouse=
 
 set background=dark
 let g:solarized_termcolors = 256
-colorscheme solarized
-"color basic-dark
+
+//solarized after 10pm and before 8am
+if 8 < strftime("%H") && strftime("%H") > 21
+  colorscheme solarized
+else
+  color basic-dark
+endif
 
 noremap <ScrollWheelUp>      <Nop>
 noremap <S-ScrollWheelUp>    <Nop>

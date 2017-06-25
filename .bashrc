@@ -1,9 +1,26 @@
+# ~/.bashrc: executed by bash(1) for non-login shells.
+# see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
+
+# If not running interactively, don't do anything
+case $- in
+    *i*) ;;
+      *) return;;
+esac
+
 if [ -f ~/.bash_local ]; then
-  source ~/.bash_local
+  . ~/.bash_local
 fi
 if [ -f ~/.bash_aliases ]; then
-  source ~/.bash_aliases
+  . ~/.bash_aliases
 fi
+
+# check the window size after each command and, if necessary,
+# update the values of LINES and COLUMNS.
+shopt -s checkwinsize
+
+# If set, the pattern "**" used in a pathname expansion context will
+# match all files and zero or more directories and subdirectories.
+shopt -s globstar
 
 set editing-mode vi
 set show-mode-in-prompt on
@@ -50,12 +67,14 @@ ranger() {
     cd "$(grep \^\' ~/.config/ranger/bookmarks | cut -b3-)"
 }
 
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
+# append to the history file, don't overwrite it
+shopt -s histappend
 export HISTFILESIZE=
 export HISTSIZE=
 export HISTCONTROL=ignorespace
 
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
 #export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"

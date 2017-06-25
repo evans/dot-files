@@ -8,6 +8,9 @@
 [diff]
   tool = vimdiff
 
+[commit]
+  gpgSign = true
+
 [alias]
   s = status
   co = checkout

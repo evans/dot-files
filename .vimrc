@@ -138,7 +138,7 @@ set mouse=
 set background=dark
 let g:solarized_termcolors = 256
 
-//solarized after 10pm and before 8am
+"solarized after 10pm and before 8am
 if 8 < strftime("%H") && strftime("%H") > 21
   colorscheme solarized
 else

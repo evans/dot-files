@@ -16,4 +16,7 @@ altscreen "on"
 defbce "on"
 term screen-256color
 
+#Scrolling fix for macOS :
+termcapinfo xterm* ti@:te@
+
 shell -/bin/bash

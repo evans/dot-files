@@ -27,15 +27,15 @@ var keyDirs = {
   'e' : NE,
   'z' : SW,
   'c' : SE
-}
+};
 
-Window.prototype.maximize = function(){
+Window.prototype.maximize = function() {
   var screen = this.screen();
   var frame = screen.flippedVisibleFrame()
   this.setFrame(frame);
 };
 
-Window.prototype.halveFrame = function(dir){
+Window.prototype.halveFrame = function(dir) {
   var screen = this.screen();
   var frame = screen.flippedVisibleFrame()
 
@@ -50,7 +50,7 @@ Window.prototype.halveFrame = function(dir){
 };
 
 // Snap a window in a given direction
-Window.prototype.to = function (dir) {
+Window.prototype.to = function(dir) {
   var screenFrame = this.screen().flippedVisibleFrame();
   var frame = this.halveFrame(dir);
 
@@ -67,13 +67,22 @@ Window.prototype.to = function (dir) {
 
 for(var key in keyDirs){
   if(keyDirs.hasOwnProperty(key)) {
-    (function (){
+    (function() {
       var k = key;
 
-      Key.on(k, ALT, function () {
+      Key.on(k, ALT, function() {
         var window = Window.focused();
 
         if (window) {
+          window.to(keyDirs[k]);
+        }
+      });
+
+      Key.on(k, ALT_SHIFT, function() {
+        var window = Window.focused();
+
+        if (window) {
+          window.setFrame(window.screen().next().flippedVisibleFrame());
           window.to(keyDirs[k]);
         }
       });
@@ -81,10 +90,19 @@ for(var key in keyDirs){
   }
 }
 
-Key.on('m', ALT, function () {
+Key.on('m', ALT, function() {
   var window = Window.focused();
 
   if (window) {
+    window.maximize();
+  }
+});
+
+Key.on('m', ALT_SHIFT, function() {
+  var window = Window.focused();
+
+  if (window) {
+    window.setFrame(window.screen().next().flippedVisibleFrame());
     window.maximize();
   }
 });

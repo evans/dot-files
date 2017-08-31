@@ -12,26 +12,77 @@ Plugin 'gmarik/Vundle.vim'
 
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
+" incsearch.vim                   vim-colors-solarized            vim-rhubarb
+" javascript-libraries-syntax.vim vim-commentary                  vim-surround
+" jplaut                          vim-fugitive                    vimperator.vim
+
+Plugin 'tpope/vim-commentary.git'
+Plugin 'tpope/vim-repeat.git'
+Plugin 'tpope/vim-surround.git'
+" :help fugitive
+Plugin 'tpope/vim-fugitive.git'
+" :Gbrowse and use hub instead of git
+Plugin 'tpope/vim-rhubarb.git'
+" use gC or :help capslock
+Plugin 'tpope/vim-capslock.git'
+
+Plugin 'haya14busa/incsearch.vim'
+
+":DetectIndent
+Plugin 'roryokane/detectindent.git'
+
+
+Plugin 'godlygeek/tabular.git'
+
+Plugin 'Valloric/YouCompleteMe'
+
+Plugin 'scrooloose/nerdtree'
 
 "Syntax highlighting
-Plugin 'jelera/vim-javascript-syntax'
+" Plugin 'jelera/vim-javascript-syntax'
 "More syntax highlighting
 Plugin 'pangloss/vim-javascript'
+
 "highights indents
 Plugin 'nathanaelkane/vim-indent-guides'
 "highights indents for jsx
 Plugin 'mxw/vim-jsx'
-"Adds closing brace
+"highights indents for json
+Plugin 'leshill/vim-json'
+"vimperator syntax highlighting
+Plugin 'vimperator/vimperator.vim.git'
+"typescript sytax highlighting
+Plugin 'leafgarland/typescript-vim.git'
+"systemverilog sytax highlighting
+Plugin 'vhda/verilog_systemverilog.vim'
+
+"Adds closing brace with some smarts
 Plugin 'Raimondi/delimitMate'
+
 "Arduino
 Plugin '4Evergreen4/vim-hardy'
+
+" Vim Script helpers
+Plugin 'eparreno/vim-l9'
+
 let delimitMate_expand_cr = 1
+let g:javascript_plugin_flow = 1
 let g:jsx_ext_required = 0
+
+" YCM haskell trigge
+let g:ycm_semantic_triggers = {'haskell' : ['.']}
 
 "Highlighting for common libraries
 "https://github.com/othree/javascript-libraries-syntax.vim
 Plugin 'othree/javascript-libraries-syntax.vim'
 
+" command-t
+" Plugin 'wincent/command-t'
+Plugin 'ctrlpvim/ctrlp.vim'
+
+" Color schemes
+Plugin 'altercation/vim-colors-solarized.git'
+Plugin 'zcodes/vim-colors-basic.git'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -51,8 +102,10 @@ filetype plugin indent on    " required
 au BufNewFile,BufRead .bash_local set filetype=sh
 au BufNewFile,BufRead .bash_aliases set filetype=sh
 au BufNewFile,BufRead *.sig set filetype=sml
-execute pathogen#infect()
 
+map /  <Plug>(incsearch-forward)
+map ?  <Plug>(incsearch-backward)
+map g/ <Plug>(incsearch-stay)
 
 " ========================
 " SOFT LINES (I'M A PUSSY)
@@ -157,3 +210,74 @@ noremap <C-ScrollWheelLeft>  <Nop>
 noremap <ScrollWheelRight>   <Nop>
 noremap <S-ScrollWheelRight> <Nop>
 noremap <C-ScrollWheelRight> <Nop>
+
+
+"merlin -ocaml completion
+let g:opamshare = substitute(system('opam config var share'),'\n$','','''')
+execute "set rtp+=" . g:opamshare . "/merlin/vim"
+
+
+" set nocompatible " be iMproved, required filetype off " required
+" filetype off
+
+" syntax on
+
+" " set the runtime path to include Vundle and initialize
+" set rtp+=~/.vim/bundle/Vundle.vim
+" call vundle#begin()
+" " alternatively, pass a path where Vundle should install plugins call vundle#begin('~/some/path/here')
+
+" " let Vundle manage Vundle, required
+
+" Plugin 'VundleVim/Vundle.vim'
+" Plugin 'Valloric/YouCompleteMe'
+" Plugin 'kien/ctrlp.vim'
+" Plugin 'scrooloose/nerdtree'
+" Plugin 'fatih/vim-go'
+" Plugin 'flazz/vim-colorschemes'
+" Plugin 'haya14busa/incsearch.vim'
+" Plugin 'airblade/vim-gitgutter'
+" Plugin 'mileszs/ack.vim'
+" Plugin 'vim-airline/vim-airline'
+" Plugin 'mattn/emmet-vim'
+" Plugin 'vim-syntastic/syntastic'
+" Plugin 'christoomey/vim-tmux-navigator'
+" Bundle 'jistr/vim-nerdtree-tabs'
+
+
+" call vundle#end() " required
+" filetype plugin indent on " required
+
+" colorscheme wombat256
+" let g:airline_powerline_fonts = 1
+
+" if executable('ag')
+"   let g:ackprg = 'ag --vimgrep'
+" endif
+
+" nnoremap <C-J> <C-W><C-J>
+" nnoremap <C-K> <C-W><C-K>
+" nnoremap <C-L> <C-W><C-L>
+" nnoremap <C-H> <C-W><C-H>
+" nmap <silent> <C-N> :NERDTreeTabsToggle<CR>
+
+" set statusline+=%#warningmsg#
+" set statusline+=%{SyntasticStatuslineFlag()}
+" set statusline+=%*
+
+" let g:syntastic_always_populate_loc_list = 1
+" let g:syntastic_auto_loc_list = 1
+" let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [],'passive_filetypes': [] }
+" " let g:syntastic_check_on_open = 1
+" " let g:syntastic_check_on_wq = 0
+
+
+" let g:syntastic_go_checkers = ['go', 'golint', 'errcheck']
+
+" set list
+" set listchars=eol:¬,tab:▸\ ,trail:·
+" set listchars=tab:▸\ ,trail:·
+" set tabstop=4
+" set shiftwidth=4
+" set nu
+" set scrolloff=10 " Keep 3 lines below and above the cursor

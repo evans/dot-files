@@ -51,5 +51,6 @@
 [push]
 	default = current
 
-[transfer]
-  fsckobjects = true
+; for the requests package that ycm depends on
+; [transfer]
+;   fsckobjects = true

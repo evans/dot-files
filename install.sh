@@ -5,6 +5,7 @@ mkdir -p ~/.config/phoenix/
 mkdir -p ~/.config/git/
 
 ln -s "$(pwd)"/.config/phoenix/phoenix.js ~/.config/phoenix/phoenix.js
+ln -s "$(pwd)"/.config/google-chrome ~/.config/google-chrome
 ln -s "$(pwd)"/.config/git/ignore ~/.config/git/ignore
 
 files=($(find . -name ".*" -type f | sed "s|^\./||"))

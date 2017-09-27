@@ -28,7 +28,7 @@
   # fast-forward only
   ff = only
   conflictstyle = diff3
-	tool = opendiff
+  tool = vimdiff
 
 [filter "hawser"]
 	clean = git hawser clean %f

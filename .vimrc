@@ -37,6 +37,8 @@ Plugin 'godlygeek/tabular.git'
 Plugin 'Valloric/YouCompleteMe'
 
 Plugin 'scrooloose/nerdtree'
+"Syntax checking/error highlighting
+Plugin 'vim-syntastic/syntastic'
 
 "Syntax highlighting
 " Plugin 'jelera/vim-javascript-syntax'
@@ -84,6 +86,11 @@ Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'altercation/vim-colors-solarized.git'
 Plugin 'zcodes/vim-colors-basic.git'
 
+Plugin 'vim-airline/vim-airline'
+Plugin 'airblade/vim-gitgutter'
+
+Plugin 'sjl/gundo.vim'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 
@@ -98,6 +105,19 @@ filetype plugin indent on    " required
 " :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
 "
 " see :h vundle for more details or wiki for FAQ
+
+
+"syntactic reommended settings
+" set statusline+=%#warningmsg#
+" set statusline+=%{SyntasticStatuslineFlag()}
+" set statusline+=%*
+
+let g:syntastic_ocaml_checkers = ['merlin']
+" let g:syntastic_always_populate_loc_list = 1
+" let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
 
 au BufNewFile,BufRead .bash_local set filetype=sh
 au BufNewFile,BufRead .bash_aliases set filetype=sh
@@ -145,7 +165,7 @@ set wildmode=longest,list  "Better unix-like tab completion
 set cursorline  "Highlight current line
 set clipboard=unnamed  "Copy and paste from system clipboard
 set lazyredraw  "Don't redraw while running macros (faster)
-set autochdir  "Change directory to currently open file
+" set autochdir  "Change directory to currently open file
 set nocompatible  "Kill vi-compatibility
 set wrap  "Visually wrap lines
 set linebreak  "Only wrap on 'good' characters for wrapping
@@ -216,31 +236,34 @@ noremap <C-ScrollWheelRight> <Nop>
 let g:opamshare = substitute(system('opam config var share'),'\n$','','''')
 execute "set rtp+=" . g:opamshare . "/merlin/vim"
 
+" map leader # to resolve conflicts
+if &diff
+    map <leader>1 :diffget LOCAL<CR>
+    map <leader>2 :diffget BASE<CR>
+    map <leader>3 :diffget REMOTE<CR>
+endif
 
-" set nocompatible " be iMproved, required filetype off " required
-" filetype off
+autocmd FileType ocaml setlocal commentstring=(*\ %s\ *)
 
-" syntax on
+autocmd BufNew,BufNewFile,BufRead *.l1,*.l2,*.l3,*.l4,*.l5,*.l6 setlocal ft=c
 
-" " set the runtime path to include Vundle and initialize
-" set rtp+=~/.vim/bundle/Vundle.vim
-" call vundle#begin()
-" " alternatively, pass a path where Vundle should install plugins call vundle#begin('~/some/path/here')
+map <C-n> :NERDTreeToggle<CR>
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | endif
 
-" " let Vundle manage Vundle, required
+nnoremap <C-g> :GundoToggle<CR>
 
-" Plugin 'VundleVim/Vundle.vim'
-" Plugin 'Valloric/YouCompleteMe'
-" Plugin 'kien/ctrlp.vim'
-" Plugin 'scrooloose/nerdtree'
-" Plugin 'fatih/vim-go'
-" Plugin 'flazz/vim-colorschemes'
-" Plugin 'haya14busa/incsearch.vim'
-" Plugin 'airblade/vim-gitgutter'
-" Plugin 'mileszs/ack.vim'
-" Plugin 'vim-airline/vim-airline'
+" Just show the filename (no path) in the tab
+" let g:airline#extensions#tabline#fnamemod = ':t'
+let g:airline#extensions#tabline#enabled = 1
+
+" let g:airline#extensions#syntastic#stl_format_err = 1
+" let g:airline#extensions#syntastic#stl_format_warn = 1
+
 " Plugin 'mattn/emmet-vim'
-" Plugin 'vim-syntastic/syntastic'
 " Plugin 'christoomey/vim-tmux-navigator'
 " Bundle 'jistr/vim-nerdtree-tabs'
 

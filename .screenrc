@@ -16,7 +16,12 @@ altscreen "on"
 defbce "on"
 term screen-256color
 
+#set excape to control + j
+escape ^Jj
+
 #Scrolling fix for macOS :
 termcapinfo xterm* ti@:te@
 
-shell -/bin/bash
+# shell -/bin/bash
+# shell "/usr/bin/zsh"
+shell "/usr/local/bin/zsh"

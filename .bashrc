@@ -86,3 +86,4 @@ export NVM_DIR="$HOME/.nvm"
 #enable gpg passphrase entry
 GPG_TTY=$(tty)
 export GPG_TTY
+

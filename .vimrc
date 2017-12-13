@@ -31,7 +31,6 @@ Plugin 'haya14busa/incsearch.vim'
 ":DetectIndent
 Plugin 'roryokane/detectindent.git'
 
-
 Plugin 'godlygeek/tabular.git'
 
 Plugin 'Valloric/YouCompleteMe'
@@ -90,6 +89,13 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'airblade/vim-gitgutter'
 
 Plugin 'sjl/gundo.vim'
+
+"js completion engine
+Plugin 'ternjs/tern_for_vim.git'
+
+"typescript
+Plugin 'Quramy/vim-js-pretty-template'
+" Plugin 'Quramy/tsuquyomi'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -244,13 +250,13 @@ if &diff
 endif
 
 autocmd FileType ocaml setlocal commentstring=(*\ %s\ *)
+autocmd BufNew,BufNewFile,BufRead *.mly setlocal commentstring=/*\ %s\ */
 
 autocmd BufNew,BufNewFile,BufRead *.l1,*.l2,*.l3,*.l4,*.l5,*.l6 setlocal ft=c
 
 map <C-n> :NERDTreeToggle<CR>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+" autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | endif
 
@@ -262,6 +268,15 @@ let g:airline#extensions#tabline#enabled = 1
 
 " let g:airline#extensions#syntastic#stl_format_err = 1
 " let g:airline#extensions#syntastic#stl_format_warn = 1
+
+
+
+"typescript
+autocmd FileType typescript JsPreTmpl html
+autocmd FileType typescript syn clear foldBraces
+autocmd FileType typescript map <leader>g :TsuDefinition<CR>
+
+
 
 " Plugin 'mattn/emmet-vim'
 " Plugin 'christoomey/vim-tmux-navigator'

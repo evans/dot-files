@@ -95,7 +95,10 @@ Plugin 'ternjs/tern_for_vim.git'
 
 "typescript
 Plugin 'Quramy/vim-js-pretty-template'
-" Plugin 'Quramy/tsuquyomi'
+Plugin 'Quramy/tsuquyomi'
+
+"Ack support
+Plugin 'mileszs/ack.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -276,7 +279,18 @@ autocmd FileType typescript JsPreTmpl html
 autocmd FileType typescript syn clear foldBraces
 autocmd FileType typescript map <leader>g :TsuDefinition<CR>
 
+set foldmethod=syntax
 
+set shell=/usr/local/bin/zsh
+
+" Use ag if present for Ack
+if executable('ag')
+  let g:ackprg = 'ag --vimgrep'
+endif
+
+" command Ag Ack
+
+command -nargs=1 Ag execute "Ack" '<args>'
 
 " Plugin 'mattn/emmet-vim'
 " Plugin 'christoomey/vim-tmux-navigator'

@@ -127,7 +127,7 @@ local current_dir="%B%F{blue}%~%f%b"
 local git_branch='$(git_prompt_info)'
 
 NORMAL_PROMPT="%{$fg_bold[yellow]%} [% NORMAL]%  %{$reset_color%}"
-INSERT_PROMPT="%{$fg_bold[cyan]%} [% INSERT]%  %{$reset_color%}"
+INSERT_PROMPT="%{$fg_bold[green]%} [% INSERT]%  %{$reset_color%}"
 
 function zle-line-init zle-keymap-select {
   VIM_PROMPT="${${KEYMAP/vicmd/$NORMAL_PROMPT}/(main|viins)/$INSERT_PROMPT}"
@@ -179,3 +179,6 @@ bindkey '^R' history-incremental-search-backward
 
 # OPAM configuration
 . ~/.opam/opam-init/init.sh > /dev/null 2> /dev/null || true
+
+# https://github.com/denysdovhan/spaceship-prompt/issues/91
+bindkey "^?" backward-delete-char

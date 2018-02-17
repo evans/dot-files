@@ -29,3 +29,5 @@ Temporary Items
 *.swp
 
 node_modules
+
+*.code-workspace

@@ -100,6 +100,12 @@ Plugin 'Quramy/tsuquyomi'
 "Ack support
 Plugin 'mileszs/ack.vim'
 
+Plugin 'reasonml-editor/vim-reason-plus'
+
+Plugin 'roxma/vim-hug-neovim-rpc'
+Plugin 'roxma/nvim-yarp'
+" Plugin 'autozimu/LanguageClient-neovim'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 
@@ -116,11 +122,17 @@ filetype plugin indent on    " required
 " see :h vundle for more details or wiki for FAQ
 
 
+"https://github.com/autozimu/LanguageClient-neovim
+"reason
+let g:LanguageClient_serverCommands = {
+    \ 'reason': ['ocaml-language-server', '--stdio'],
+    \ 'ocaml': ['ocaml-language-server', '--stdio'],
+    \ }
+
 "syntactic reommended settings
 " set statusline+=%#warningmsg#
 " set statusline+=%{SyntasticStatuslineFlag()}
 " set statusline+=%*
-
 let g:syntastic_ocaml_checkers = ['merlin']
 " let g:syntastic_always_populate_loc_list = 1
 " let g:syntastic_auto_loc_list = 1
@@ -185,6 +197,9 @@ set nostartofline "Vertical movement preserves horizontal position
 
 " Strip whitespace from end of lines when writing file
 autocmd BufWritePre * :%s/\s\+$//e
+
+" Open all folds by default
+autocmd BufRead * normal zR
 
 " Syntax highlighting and stuff
 syntax on
@@ -251,6 +266,8 @@ if &diff
     map <leader>2 :diffget BASE<CR>
     map <leader>3 :diffget REMOTE<CR>
 endif
+
+autocmd BufReadPost *.re setlocal filetype=reason
 
 autocmd FileType ocaml setlocal commentstring=(*\ %s\ *)
 autocmd BufNew,BufNewFile,BufRead *.mly setlocal commentstring=/*\ %s\ */

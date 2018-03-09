@@ -41,10 +41,48 @@ vim +BundleDocs +qall
 if [[ "$OSTYPE" == "darwin"* ]]; then
   # Mac OSX
   /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+  brew cask install xquartz
+
+  brew install opam
+  brew install jq
+  brew install git
+  brew install wget
+  brew install cmake
+  brew install go
+  brew install rust
+  brew install openssl
+  brew install vim --with-client-server --with-gettext --with-lua --with-python3 --with-tcl
+  brew install hub
+  brew install colordiff
+  brew install screen
+  brew install youtube-dl
+  brew install yarn
+  brew install grip
+  brew install heroku/brew/heroku
+
+  brew cask install phoenix
+  brew cask install slack
+  brew cask install visual-studio-code
+  brew cask install vlc
+  brew cask install sketch
+  brew cask install flux
+  brew cask install alfred
+  brew cask install gimp
+  brew cask install kindle
+  brew cask install quip
+  brew cask install firefox
+  brew cask install google-chrome
+  brew cask install istat-menus
+  brew cask install iina
+  brew cask install gpg-suite
+
+  brew install zsh
+  sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+  mv .zshrc.pre-oh-my-zsh .zshrc
+
 fi
 
-brew install opam
-
-#curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh | bash
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh | bash
 
 source ~/.bash_profile

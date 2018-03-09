@@ -100,11 +100,14 @@ Plugin 'Quramy/tsuquyomi'
 "Ack support
 Plugin 'mileszs/ack.vim'
 
-Plugin 'reasonml-editor/vim-reason-plus'
-
-Plugin 'roxma/vim-hug-neovim-rpc'
-Plugin 'roxma/nvim-yarp'
+" Reason stuff
+" Plugin 'reasonml-editor/vim-reason-plus'
+" Plugin 'roxma/vim-hug-neovim-rpc'
+" Plugin 'roxma/nvim-yarp'
 " Plugin 'autozimu/LanguageClient-neovim'
+
+Bundle 'mattn/webapi-vim'
+Bundle 'mattn/gist-vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -138,6 +141,8 @@ let g:syntastic_ocaml_checkers = ['merlin']
 " let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
 
 
 au BufNewFile,BufRead .bash_local set filetype=sh
@@ -184,7 +189,7 @@ set incsearch  "Start searching immediately
 set scrolloff=5  "Never scroll off
 set wildmode=longest,list  "Better unix-like tab completion
 set cursorline  "Highlight current line
-set clipboard=unnamed  "Copy and paste from system clipboard
+" set clipboard=unnamed  "Copy and paste from system clipboard
 set lazyredraw  "Don't redraw while running macros (faster)
 " set autochdir  "Change directory to currently open file
 set nocompatible  "Kill vi-compatibility
@@ -289,7 +294,7 @@ let g:airline#extensions#tabline#enabled = 1
 " let g:airline#extensions#syntastic#stl_format_err = 1
 " let g:airline#extensions#syntastic#stl_format_warn = 1
 
-
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
 
 "typescript
 autocmd FileType typescript JsPreTmpl html

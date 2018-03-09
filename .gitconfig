@@ -54,3 +54,7 @@
 ; for the requests package that ycm depends on
 ; [transfer]
 ;   fsckobjects = true
+[core]
+	pager = less -+F -+X
+[github]
+	user = evans

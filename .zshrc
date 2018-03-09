@@ -177,6 +177,8 @@ bindkey -v
 #Reverse search
 bindkey '^R' history-incremental-search-backward
 
+unsetopt HIST_VERIFY
+
 # OPAM configuration
 . ~/.opam/opam-init/init.sh > /dev/null 2> /dev/null || true
 

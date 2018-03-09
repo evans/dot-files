@@ -27,6 +27,7 @@ Temporary Items
 .apdisk
 
 *.swp
+*.code-workspace
 
 node_modules
 

@@ -44,38 +44,39 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
 
   brew cask install xquartz
 
-  brew install opam
-  brew install jq
-  brew install git
-  brew install wget
   brew install cmake
-  brew install go
-  brew install rust
-  brew install openssl
-  brew install vim --with-client-server --with-gettext --with-lua --with-python3 --with-tcl
-  brew install hub
   brew install colordiff
-  brew install screen
-  brew install youtube-dl
-  brew install yarn
+  brew install git
+  brew install go
   brew install grip
   brew install heroku/brew/heroku
+  brew install hub
+  brew install jq
+  brew install opam
+  brew install openssl
+  brew install postgresql
+  brew install rust
+  brew install screen
+  brew install vim --with-client-server --with-gettext --with-lua --with-python3 --with-tcl
+  brew install wget
+  brew install yarn
+  brew install youtube-dl
 
+  brew cask install alfred
+  brew cask install firefox
+  brew cask install flux
+  brew cask install gimp
+  brew cask install google-chrome
+  brew cask install gpg-suite
+  brew cask install iina
+  brew cask install istat-menus
+  brew cask install kindle
   brew cask install phoenix
+  brew cask install quip
+  brew cask install sketch
   brew cask install slack
   brew cask install visual-studio-code
   brew cask install vlc
-  brew cask install sketch
-  brew cask install flux
-  brew cask install alfred
-  brew cask install gimp
-  brew cask install kindle
-  brew cask install quip
-  brew cask install firefox
-  brew cask install google-chrome
-  brew cask install istat-menus
-  brew cask install iina
-  brew cask install gpg-suite
 
   brew install zsh
   sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"

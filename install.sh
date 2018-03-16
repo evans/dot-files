@@ -52,6 +52,7 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
   brew install heroku/brew/heroku
   brew install hub
   brew install jq
+  brew install mongodb
   brew install opam
   brew install openssl
   brew install postgresql

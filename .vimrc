@@ -145,9 +145,12 @@ let g:syntastic_check_on_wq = 0
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
 
 
+"set filetypes
 au BufNewFile,BufRead .bash_local set filetype=sh
 au BufNewFile,BufRead .bash_aliases set filetype=sh
 au BufNewFile,BufRead *.sig set filetype=sml
+au BufNewFile,BufRead *.ejs set filetype=html
+
 
 map /  <Plug>(incsearch-forward)
 map ?  <Plug>(incsearch-backward)

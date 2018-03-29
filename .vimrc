@@ -109,6 +109,8 @@ Plugin 'mileszs/ack.vim'
 Bundle 'mattn/webapi-vim'
 Bundle 'mattn/gist-vim'
 
+Plugin 'prettier/vim-prettier'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 
@@ -124,6 +126,18 @@ filetype plugin indent on    " required
 "
 " see :h vundle for more details or wiki for FAQ
 
+" Prettier
+let g:prettier#autoformat = 0
+let g:prettier#config#single_quote = 'true'
+let g:prettier#config#trailing_comma = 'all'
+
+" setting the defaults
+let g:prettier#config#bracket_spacing = 'true'
+let g:prettier#config#jsx_bracket_same_line = 'false'
+let g:prettier#config#arrow_parens = 'avoid'
+let g:prettier#config#parser = 'babylon'
+
+autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*\(package\)\@<!.json,*.graphql,*.vue Prettier
 
 "https://github.com/autozimu/LanguageClient-neovim
 "reason
@@ -150,7 +164,7 @@ au BufNewFile,BufRead .bash_local set filetype=sh
 au BufNewFile,BufRead .bash_aliases set filetype=sh
 au BufNewFile,BufRead *.sig set filetype=sml
 au BufNewFile,BufRead *.ejs set filetype=html
-
+au BufNewFile,BufFilePre,BufRead *.md set filetype=markdown
 
 map /  <Plug>(incsearch-forward)
 map ?  <Plug>(incsearch-backward)
@@ -304,6 +318,7 @@ autocmd FileType typescript JsPreTmpl html
 autocmd FileType typescript syn clear foldBraces
 autocmd FileType typescript map <leader>g :TsuDefinition<CR>
 
+
 set foldmethod=syntax
 
 set shell=/usr/local/bin/zsh
@@ -316,6 +331,9 @@ endif
 " command Ag Ack
 
 command -nargs=1 Ag execute "Ack" '<args>'
+
+"markdown
+let g:markdown_fenced_languages = ['html', 'python', 'bash=sh', 'js=javascript', 'javascript']
 
 " Plugin 'mattn/emmet-vim'
 " Plugin 'christoomey/vim-tmux-navigator'

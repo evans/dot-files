@@ -70,6 +70,7 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
   brew cask install google-chrome
   brew cask install gpg-suite
   brew cask install iina
+  brew cask install inkscape
   brew cask install istat-menus
   brew cask install kindle
   brew cask install phoenix

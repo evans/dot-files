@@ -71,9 +71,11 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
   brew cask install gpg-suite
   brew cask install iina
   brew cask install inkscape
+  brew cask install insomnia
   brew cask install istat-menus
   brew cask install kindle
   brew cask install phoenix
+  brew cask install postman
   brew cask install quip
   brew cask install sketch
   brew cask install slack

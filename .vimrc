@@ -79,7 +79,7 @@ Plugin 'othree/javascript-libraries-syntax.vim'
 
 " command-t
 " Plugin 'wincent/command-t'
-Plugin 'ctrlpvim/ctrlp.vim'
+" Plugin 'ctrlpvim/ctrlp.vim'
 
 " Color schemes
 Plugin 'altercation/vim-colors-solarized.git'
@@ -205,7 +205,7 @@ set smartcase  "Search using smartcase
 set incsearch  "Start searching immediately
 set scrolloff=5  "Never scroll off
 set wildmode=longest,list  "Better unix-like tab completion
-set cursorline  "Highlight current line
+" set cursorline  "Highlight current line
 " set clipboard=unnamed  "Copy and paste from system clipboard
 set lazyredraw  "Don't redraw while running macros (faster)
 " set autochdir  "Change directory to currently open file
@@ -311,13 +311,11 @@ let g:airline#extensions#tabline#enabled = 1
 " let g:airline#extensions#syntastic#stl_format_err = 1
 " let g:airline#extensions#syntastic#stl_format_warn = 1
 
-let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
-
 "typescript
 autocmd FileType typescript JsPreTmpl html
 autocmd FileType typescript syn clear foldBraces
 autocmd FileType typescript map <leader>g :TsuDefinition<CR>
-
+autocmd FileType typescript nmap <buffer> <Leader>t : <C-u>echo tsuquyomi#hint()<CR>
 
 set foldmethod=syntax
 

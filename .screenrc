@@ -17,7 +17,7 @@ defbce "on"
 term screen-256color
 
 #set excape to control + j
-escape ^Jj
+escape ^Hh
 
 #Scrolling fix for macOS :
 termcapinfo xterm* ti@:te@

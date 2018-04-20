@@ -58,7 +58,7 @@ Plugin 'leafgarland/typescript-vim.git'
 Plugin 'vhda/verilog_systemverilog.vim'
 
 "Adds closing brace with some smarts
-Plugin 'Raimondi/delimitMate'
+" Plugin 'Raimondi/delimitMate'
 
 "Arduino
 Plugin '4Evergreen4/vim-hardy'
@@ -111,6 +111,13 @@ Bundle 'mattn/gist-vim'
 
 Plugin 'prettier/vim-prettier'
 
+" Track the engine.
+Plugin 'SirVer/ultisnips'
+
+" Snippets are separated from the engine. Add this if you want them:
+Plugin 'honza/vim-snippets'
+
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 
@@ -125,6 +132,39 @@ filetype plugin indent on    " required
 " :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
 "
 " see :h vundle for more details or wiki for FAQ
+
+" Snippets
+" function! g:UltiSnips_Complete()
+"     call UltiSnips#ExpandSnippet()
+"     if g:ulti_expand_res == 0
+"         if pumvisible()
+"             return "\<C-n>"
+"         else
+"             call UltiSnips#JumpForwards()
+"             if g:ulti_jump_forwards_res == 0
+"                return "\<TAB>"
+"             endif
+"         endif
+"     endif
+"     return ""
+" endfunction
+
+" au BufEnter * exec "inoremap <silent> " . g:UltiSnipsExpandTrigger . " <C-R>=g:UltiSnips_Complete()<cr>"
+" let g:UltiSnipsJumpForwardTrigger="<tab>"
+" let g:UltiSnipsListSnippets="<c-e>"
+
+" " this mapping Enter key to <C-y> to chose the current highlight item
+" " and close the selection list, same as other IDEs.
+" " CONFLICT with some plugins like tpope/Endwise
+" inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+let g:UltiSnipsExpandTrigger="<c-j>"
+let g:UltiSnipsJumpForwardTrigger="<c-j>"
+let g:UltiSnipsJumpBackwardTrigger="<c-k>"
+let g:UltiSnipsListSnippets="<c-e>"
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"
+let g:UltiSnipsSnippetsDir=$HOME.'/.config/UltiSnips'
+let g:UltiSnipsSnippetDirectories=[$HOME."/.config/UltiSnips"]
 
 " Prettier
 let g:prettier#autoformat = 0
@@ -194,7 +234,7 @@ set softtabstop=2  "Tab spaces in no hard tab mode
 set expandtab  " Expand tabs into spaces
 set autoindent  "autoindent on new lines
 set showmatch  "Highlight matching braces
-set ruler  "Show bottom ruler
+" set ruler  "Show bottom ruler
 set equalalways  "Split windows equal size
 set formatoptions=croq  "Enable comment line auto formatting
 set wildignore+=*.o,*.obj,*.class,*.swp,*.pyc "Ignore junk files

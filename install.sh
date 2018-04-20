@@ -45,6 +45,7 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
 
   brew cask install xquartz
 
+  brew install clojure
   brew install cmake
   brew install colordiff
   brew install git
@@ -54,6 +55,7 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
   brew install hub
   brew install jq
   brew install mongodb
+  brew install leiningen
   brew install opam
   brew install openssl
   brew install postgresql

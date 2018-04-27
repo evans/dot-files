@@ -9,3 +9,14 @@ snippet ` "code block"
 ${VISUAL}$0
 \`\`\`
 endsnippet
+
+snippet link "make link"
+[${VISUAL}](${1:link})$0
+endsnippet
+
+snippet req "change import to require"
+`!p
+if snip.v and snip.v.text:
+	replaced = snip.v.text.replace("import", "const").replace("from ", "= require(")
+	snip.rv = re.sub(r"(\"|');*$", r"\1);", replaced, flags=re.MULTILINE).rstrip()`
+endsnippet

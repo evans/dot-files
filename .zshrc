@@ -184,3 +184,5 @@ unsetopt HIST_VERIFY
 
 # https://github.com/denysdovhan/spaceship-prompt/issues/91
 bindkey "^?" backward-delete-char
+
+export EDITOR=vim

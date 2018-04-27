@@ -231,10 +231,11 @@ set tabstop=2  "4 space tabs
 set shiftwidth=2  "4 space shift
 set softtabstop=2  "Tab spaces in no hard tab mode
 
+
 set expandtab  " Expand tabs into spaces
 set autoindent  "autoindent on new lines
 set showmatch  "Highlight matching braces
-" set ruler  "Show bottom ruler
+set ruler  "Show bottom ruler
 set equalalways  "Split windows equal size
 set formatoptions=croq  "Enable comment line auto formatting
 set wildignore+=*.o,*.obj,*.class,*.swp,*.pyc "Ignore junk files
@@ -246,7 +247,7 @@ set incsearch  "Start searching immediately
 set scrolloff=5  "Never scroll off
 set wildmode=longest,list  "Better unix-like tab completion
 " set cursorline  "Highlight current line
-" set clipboard=unnamed  "Copy and paste from system clipboard
+set clipboard=unnamed  "Copy and paste from system clipboard
 set lazyredraw  "Don't redraw while running macros (faster)
 " set autochdir  "Change directory to currently open file
 set nocompatible  "Kill vi-compatibility

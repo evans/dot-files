@@ -86,7 +86,7 @@ Plugin 'altercation/vim-colors-solarized.git'
 Plugin 'zcodes/vim-colors-basic.git'
 
 Plugin 'vim-airline/vim-airline'
-Plugin 'airblade/vim-gitgutter'
+" Plugin 'airblade/vim-gitgutter'
 
 Plugin 'sjl/gundo.vim'
 
@@ -204,7 +204,9 @@ au BufNewFile,BufRead .bash_local set filetype=sh
 au BufNewFile,BufRead .bash_aliases set filetype=sh
 au BufNewFile,BufRead *.sig set filetype=sml
 au BufNewFile,BufRead *.ejs set filetype=html
-au BufNewFile,BufFilePre,BufRead *.md set filetype=markdown
+au BufNewFile,BufFilePre,BufRead *.md
+      \ set filetype=markdown |
+      \ set spell spelllang=en_us "Enable spellchecking
 
 map /  <Plug>(incsearch-forward)
 map ?  <Plug>(incsearch-backward)

@@ -59,6 +59,7 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
   brew install opam
   brew install openssl
   brew install postgresql
+  brew install pstree
   brew install rust
   brew install screen
   brew install vim --with-client-server --with-gettext --with-lua --with-python3 --with-tcl

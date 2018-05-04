@@ -48,14 +48,15 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
   brew install clojure
   brew install cmake
   brew install colordiff
+  brew install direnv
   brew install git
   brew install go
   brew install grip
   brew install heroku/brew/heroku
   brew install hub
   brew install jq
-  brew install mongodb
   brew install leiningen
+  brew install mongodb
   brew install opam
   brew install openssl
   brew install postgresql

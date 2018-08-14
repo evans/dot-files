@@ -20,3 +20,19 @@ if snip.v and snip.v.text:
 	replaced = snip.v.text.replace("import", "const").replace("from ", "= require(")
 	snip.rv = re.sub(r"(\"|');*$", r"\1);", replaced, flags=re.MULTILINE).rstrip()`
 endsnippet
+
+snippet h "change import to require"
+<h`!p
+if snip.v and snip.v.text:
+	snip.rv = str(snip.v.text.count('#'))
+` id="${1:`!p
+if snip.v and snip.v.text:
+	snip.rv = snip.v.text.lstrip('# ').rstrip()
+`}">${2:`!p
+if snip.v and snip.v.text:
+	snip.rv = snip.v.text.lstrip('# ').rstrip()
+`}</h`!p
+if snip.v and snip.v.text:
+	snip.rv = str(snip.v.text.count('#'))
+`>$0
+endsnippet

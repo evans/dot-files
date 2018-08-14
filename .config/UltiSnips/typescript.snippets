@@ -1,0 +1,47 @@
+snippet req "change import to require"
+`!p
+if snip.v and snip.v.text:
+	replaced = snip.v.text.replace("import", "const").replace("from ", "= require(")
+	snip.rv = re.sub(r"(\"|');*$", r"\1);", replaced, flags=re.MULTILINE).rstrip()`
+endsnippet
+
+snippet imp "change require to import"
+`!p
+if snip.v and snip.v.text:
+	replaced = snip.v.text.replace("const	", "import").replace("var ", "import").replace("= require(", "from ")
+	snip.rv = re.sub(r");$", r";", replaced, flags=re.MULTILINE).rstrip()`
+endsnippet
+
+snippet ts "change import to ts-import"
+`!p
+if snip.v and snip.v.text:
+	snip.rv = snip.v.text.replace(" * as", "").replace("from ", "= require(").replace(";", ");").rstrip()`
+endsnippet
+
+snippet cl "add print"
+console.log($1);$0
+endsnippet
+
+snippet ct "add trace"
+console.trace();$0
+endsnippet
+
+snippet con "add print"
+console.log(\`${1:hi}\`);$0
+endsnippet
+
+snippet col "add print"
+console.log(${1:\`${2:hi}\`});$0
+endsnippet
+
+snippet JS
+JSON.stringify(${VISUAL}$1, null, 2)$0
+endsnippet
+
+snippet JP
+JSON.parse(${VISUAL}$1)$0
+endsnippet
+
+snippet ({
+({${VISUAL}})$0
+endsnippet

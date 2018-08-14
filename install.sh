@@ -69,6 +69,8 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
   brew install youtube-dl
 
   brew cask install alfred
+  brew cask install docker
+  brew cask install eclipse-java
   brew cask install firefox
   brew cask install flux
   brew cask install gimp
@@ -78,6 +80,7 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
   brew cask install inkscape
   brew cask install insomnia
   brew cask install istat-menus
+  brew cask install java
   brew cask install kindle
   brew cask install phoenix
   brew cask install postman

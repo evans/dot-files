@@ -79,7 +79,7 @@ Plugin 'othree/javascript-libraries-syntax.vim'
 
 " command-t
 " Plugin 'wincent/command-t'
-" Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'ctrlpvim/ctrlp.vim'
 
 " Color schemes
 Plugin 'altercation/vim-colors-solarized.git'
@@ -117,6 +117,13 @@ Plugin 'SirVer/ultisnips'
 " Snippets are separated from the engine. Add this if you want them:
 Plugin 'honza/vim-snippets'
 
+" Go Code explorer
+Plugin 'fatih/vim-go'
+
+" Git explorer
+Plugin 'jreybert/vimagit'
+Plugin 'junkblocker/patchreview-vim'
+Plugin 'codegram/vim-codereview'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -305,7 +312,10 @@ if 8 < strftime("%H") && strftime("%H") > 21
   colorscheme solarized
 else
   color basic-dark
+  hi SpellBad ctermbg=057
 endif
+" let s:red = \"ee877d\"
+" call <SID>X("WarningMsg", s:red, \"", \"none")
 
 noremap <ScrollWheelUp>      <Nop>
 noremap <S-ScrollWheelUp>    <Nop>
@@ -356,9 +366,14 @@ let g:airline#extensions#tabline#enabled = 1
 
 "typescript
 autocmd FileType typescript JsPreTmpl html
-autocmd FileType typescript syn clear foldBraces
+" autocmd FileType typescript syn clear foldBraces
 autocmd FileType typescript map <leader>g :TsuDefinition<CR>
 autocmd FileType typescript nmap <buffer> <Leader>t : <C-u>echo tsuquyomi#hint()<CR>
+
+"go
+" autocmd FileType typescript syn clear foldBraces
+autocmd FileType go map <leader>g :GoDef<CR>
+autocmd FileType go nmap <buffer> <Leader>t : <C-u>echo tsuquyomi#hint()<CR>
 
 set foldmethod=syntax
 

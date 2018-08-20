@@ -11,6 +11,7 @@ else
   alias s="screen"
 fi
 alias v="vim"
+alias vi="vim"
 # long with human readable size and all files
 alias ll="ls -lhA"
 

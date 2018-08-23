@@ -186,3 +186,6 @@ unsetopt HIST_VERIFY
 bindkey "^?" backward-delete-char
 
 export EDITOR=vim
+
+# For monorepo https://direnv.net/
+eval "$(direnv hook zsh)"

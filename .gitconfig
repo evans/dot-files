@@ -56,5 +56,6 @@
 ;   fsckobjects = true
 [core]
 	pager = less -+F -+X
+	excludesfile = ~/.config/git/ignore
 [github]
 	user = evans

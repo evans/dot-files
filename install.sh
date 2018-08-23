@@ -51,6 +51,7 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
   brew install direnv
   brew install git
   brew install go
+  brew install gradle
   brew install grip
   brew install heroku/brew/heroku
   brew install hub

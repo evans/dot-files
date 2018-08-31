@@ -45,6 +45,7 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
 
   brew cask install xquartz
 
+  brew install circleci
   brew install clojure
   brew install cmake
   brew install colordiff

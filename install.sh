@@ -84,6 +84,7 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
   brew cask install istat-menus
   brew cask install java
   brew cask install kindle
+  brew cask install minikube
   brew cask install phoenix
   brew cask install postman
   brew cask install quip

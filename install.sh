@@ -65,6 +65,7 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
   brew install pstree
   brew install rust
   brew install screen
+  brew install tig
   brew install vim --with-client-server --with-gettext --with-lua --with-python3 --with-tcl
   brew install wget
   brew install yarn
@@ -86,6 +87,7 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
   brew cask install kindle
   brew cask install minikube
   brew cask install phoenix
+  brew cask install postico
   brew cask install postman
   brew cask install quip
   brew cask install sketch

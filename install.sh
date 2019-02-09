@@ -65,8 +65,12 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
   brew install pstree
   brew install rust
   brew install screen
+  # git history
   brew install tig
+  # code stats
+  brew install tokei
   brew install vim --with-client-server --with-gettext --with-lua --with-python3 --with-tcl --with-override-system-vi
+  brew install vim --with-client-server --with-gettext --with-lua --with-python3 --with-tcl
   brew install wget
   brew install yarn
   brew install youtube-dl

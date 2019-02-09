@@ -43,6 +43,9 @@ Plugin 'vim-syntastic/syntastic'
 " Plugin 'jelera/vim-javascript-syntax'
 "More syntax highlighting
 Plugin 'pangloss/vim-javascript'
+Plugin 'udalov/kotlin-vim'
+Plugin 'jparise/vim-graphql'
+Plugin 'HerringtonDarkholme/yats.vim'
 
 "highights indents
 Plugin 'nathanaelkane/vim-indent-guides'
@@ -53,7 +56,7 @@ Plugin 'leshill/vim-json'
 "vimperator syntax highlighting
 Plugin 'vimperator/vimperator.vim.git'
 "typescript sytax highlighting
-Plugin 'leafgarland/typescript-vim.git'
+" Plugin 'leafgarland/typescript-vim.git'
 "systemverilog sytax highlighting
 Plugin 'vhda/verilog_systemverilog.vim'
 
@@ -185,6 +188,13 @@ let g:prettier#config#arrow_parens = 'avoid'
 let g:prettier#config#parser = 'babylon'
 
 autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*\(package\)\@<!.json,*.graphql,*.vue Prettier
+
+" enable detection of indent
+autocmd BufReadPost * :DetectIndent
+let g:detectindent_preferred_indent = 2
+" uses spaces not tabs
+let g:detectindent_preferred_expandtab = 1
+
 
 "https://github.com/autozimu/LanguageClient-neovim
 "reason

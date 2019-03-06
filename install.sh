@@ -74,6 +74,7 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
   brew install wget
   brew install yarn
   brew install youtube-dl
+  brew install yq
 
   brew cask install alfred
   brew cask install docker

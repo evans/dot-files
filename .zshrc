@@ -55,6 +55,7 @@ ZSH_THEME="philips"
 plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
+unalias gcm
 
 # User configuration
 

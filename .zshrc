@@ -124,7 +124,9 @@ fi
 
 local return_code="%(?..%F{red}%? ↵%f)"
 
-local user_host="${PR_USER}%F{cyan}@${PR_HOST}"
+# local user_host="${PR_USER}%F{cyan}@${PR_HOST}"
+local user_host="${PR_USER}"
+# local current_dir="%B%F{blue}%c%f%b"
 local current_dir="%B%F{blue}%~%f%b"
 local git_branch='$(git_prompt_info)'
 
@@ -134,9 +136,10 @@ INSERT_PROMPT="%{$fg_bold[green]%} [% INSERT]%  %{$reset_color%}"
 function zle-line-init zle-keymap-select {
   VIM_PROMPT="${${KEYMAP/vicmd/$NORMAL_PROMPT}/(main|viins)/$INSERT_PROMPT}"
 
-  PROMPT="╭─${user_host} ${current_dir} ${git_branch}
+  PROMPT="╭─%{$fg[yellow]%}[%D{%f/%m/%y} %D{%L:%M:%S}] ${user_host} ${current_dir} ${git_branch}
 ╰─${VIM_PROMPT} ${PR_PROMPT} "
   RPROMPT="${return_code}"
+  # PROMPT="${VIM_PROMPT} ${user_host} ${current_dir} ${git_branch} ${PR_PROMPT} "
 
   zle reset-prompt
 }

@@ -200,3 +200,5 @@ if [ -f '/Users/evans/Downloads/google-cloud-sdk/path.zsh.inc' ]; then source '/
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/evans/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/evans/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
+
+export PATH="/usr/local/sbin:$PATH"

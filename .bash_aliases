@@ -15,6 +15,10 @@ alias vi="vim"
 # long with human readable size and all files
 alias ll="ls -lhA"
 
+# generate iso timestamp
+# from https://stackoverflow.com/a/7216394
+alias isodate='date -u +"%Y-%m-%dT%H:%M:%SZ"'
+
 # Monitor logs
 # alias syslog='sudo tail -100f /var/log/syslog'
 # alias messages='sudo tail -100f /var/log/messages'

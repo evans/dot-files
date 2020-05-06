@@ -59,6 +59,7 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
   brew install jq
   brew install leiningen
   brew install mongodb
+  brew install octave
   brew install opam
   brew install openssl
   brew install postgresql
@@ -69,6 +70,7 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
   brew install tig
   # code stats
   brew install tokei
+  brew install unrar
   brew install vim --with-client-server --with-gettext --with-lua --with-python3 --with-tcl --with-override-system-vi
   brew install vim --with-client-server --with-gettext --with-lua --with-python3 --with-tcl
   brew install wget

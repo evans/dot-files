@@ -79,6 +79,7 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
   brew install yq
 
   brew cask install alfred
+  brew cask install calibre
   brew cask install docker
   brew cask install eclipse-java
   brew cask install firefox
@@ -92,6 +93,7 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
   brew cask install istat-menus
   brew cask install java
   brew cask install kindle
+  brew cask install lulu
   brew cask install minikube
   brew cask install phoenix
   brew cask install postico

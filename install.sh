@@ -41,7 +41,7 @@ vim +BundleDocs +qall
 #install homebrew
 if [[ "$OSTYPE" == "darwin"* ]]; then
   # Mac OSX
-  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
   brew cask install xquartz
 

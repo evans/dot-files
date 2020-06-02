@@ -115,4 +115,7 @@ fi
 
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh | bash
 
+#link vscode settings after installing
+ln -Fs "$(pwd)"/vscode/settings.json ~/Library/Application\ Support/Code/User/settings.json
+
 source ~/.bash_profile

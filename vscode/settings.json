@@ -1,0 +1,17 @@
+{
+  "vim.disableAnnoyingNeovimMessage": true,
+  "workbench.startupEditor": "newUntitledFile",
+  "workbench.editor.enablePreview": false,
+  "reason.diagnostics.tools": ["bsb", "merlin"],
+  "window.zoomLevel": 0,
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.formatOnSave": true,
+  "vim.commandLineModeKeyBindings": [
+    {
+      "before": ["W"],
+      "after": ["w"]
+    }
+  ]
+}

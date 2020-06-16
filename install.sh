@@ -64,6 +64,7 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
   brew install openssl
   brew install postgresql
   brew install pstree
+  brew install python3
   brew install rust
   brew install screen
   # git history

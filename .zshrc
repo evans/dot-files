@@ -202,3 +202,6 @@ if [ -f '/Users/evans/Downloads/google-cloud-sdk/path.zsh.inc' ]; then source '/
 if [ -f '/Users/evans/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/evans/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
 
 export PATH="/usr/local/sbin:$PATH"
+# python path https://gist.github.com/patriciogonzalezvivo/77da993b14a48753efda
+export PATH="/usr/local/opt/python/libexec/bin:$PATH"
+

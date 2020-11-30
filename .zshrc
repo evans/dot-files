@@ -205,3 +205,4 @@ export PATH="/usr/local/sbin:$PATH"
 # python path https://gist.github.com/patriciogonzalezvivo/77da993b14a48753efda
 export PATH="/usr/local/opt/python/libexec/bin:$PATH"
 
+export PATH="/usr/local/opt/openjdk/bin:$PATH"

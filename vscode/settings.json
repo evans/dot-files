@@ -1,9 +1,10 @@
 {
   "vim.disableAnnoyingNeovimMessage": true,
+  "emmet.showExpandedAbbreviation": "never",
   "workbench.startupEditor": "newUntitledFile",
   "workbench.editor.enablePreview": false,
   "reason.diagnostics.tools": ["bsb", "merlin"],
-  "window.zoomLevel": 0,
+  "window.zoomLevel": 2,
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
@@ -13,5 +14,17 @@
       "before": ["W"],
       "after": ["w"]
     }
-  ]
+  ],
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.suggest.showClasses": false
+  },
+  "editor.snippetSuggestions": "bottom",
+  "cSpell.enabled": false,
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }

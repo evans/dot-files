@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/evans/.oh-my-zsh
+export ZSH=~/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -196,10 +196,10 @@ export EDITOR=vim
 eval "$(direnv hook zsh)"
 
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/evans/Downloads/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/evans/Downloads/google-cloud-sdk/path.zsh.inc'; fi
+if [ -f '~/Downloads/google-cloud-sdk/path.zsh.inc' ]; then source '~/Downloads/google-cloud-sdk/path.zsh.inc'; fi
 
 # The next line enables shell command completion for gcloud.
-if [ -f '/Users/evans/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/evans/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
+if [ -f '~/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then source '~/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
 
 export PATH="/usr/local/sbin:$PATH"
 # python path https://gist.github.com/patriciogonzalezvivo/77da993b14a48753efda

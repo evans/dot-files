@@ -120,4 +120,7 @@ curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh | b
 #link vscode settings after installing
 ln -Fs "$(pwd)"/vscode/settings.json ~/Library/Application\ Support/Code/User/settings.json
 
+# haskell
+curl --proto '=https' --tlsv1.2 -sSf https://get-ghcup.haskell.org | sh
+
 source ~/.bash_profile

@@ -15,6 +15,24 @@
       "after": ["w"]
     }
   ],
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["k"],
+      "after": ["g", "k"]
+    },
+    {
+      "before": ["g", "k"],
+      "after": ["up"]
+    },
+    {
+      "before": ["j"],
+      "after": ["g", "j"]
+    },
+    {
+      "before": ["g", "j"],
+      "after": ["down"]
+    }
+  ],
   "[typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.suggest.showClasses": false

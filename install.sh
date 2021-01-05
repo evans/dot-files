@@ -59,6 +59,7 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
   brew install python3
   brew install rust
   brew install screen
+  brew install the_silver_searcher
   # git history
   brew install tig
   # code stats

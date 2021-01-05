@@ -19,16 +19,9 @@ do
   fi
 done
 
-if ! [ hash nvm 2>/dev/null ]; then
+if ! [ -x "$(command -v nvm)" ]; then
   curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh | bash
 fi
-
-#https://github.com/VundleVim/Vundle.vim
-#Launch vim and run :PluginInstall
-#To install from command line: vim +PluginInstall +qall
-git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-vim +PluginInstall +qall
-vim +BundleDocs +qall
 
 # read -p "Would you like to install gcp(Google Cloud Platform)[yY]? " -r
 # echo # move to a new line
@@ -41,7 +34,9 @@ vim +BundleDocs +qall
 #install homebrew
 if [[ "$OSTYPE" == "darwin"* ]]; then
   # Mac OSX
-  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+  if ! [ -x "$(command -v brew)" ]; then
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+  fi
 
   brew install --cask xquartz
 
@@ -115,10 +110,20 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
 
 fi
 
-curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh | bash
-
 #link vscode settings after installing
-ln -Fs "$(pwd)"/vscode/settings.json ~/Library/Application\ Support/Code/User/settings.json
+if [ hash code 2>/dev/null ]; then
+  ln -Fs "$(pwd)"/vscode/settings.json ~/Library/Application\ Support/Code/User/settings.json
+fi
+
+if [ hash zsh 2>/dev/null ]; then
+  #https://github.com/VundleVim/Vundle.vim
+  #Launch vim and run :PluginInstall
+  #To install from command line: vim +PluginInstall +qall
+  git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+  vim +PluginInstall +qall
+  vim +BundleDocs +qall
+fi
+
 
 # haskell
 curl --proto '=https' --tlsv1.2 -sSf https://get-ghcup.haskell.org | sh

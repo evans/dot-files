@@ -387,7 +387,7 @@ autocmd FileType go nmap <buffer> <Leader>t : <C-u>echo tsuquyomi#hint()<CR>
 
 set foldmethod=syntax
 
-set shell=/usr/local/bin/zsh
+set shell=zsh
 
 " Use ag if present for Ack
 if executable('ag')

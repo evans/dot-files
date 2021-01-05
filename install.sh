@@ -43,7 +43,7 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
   # Mac OSX
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
-  brew cask install xquartz
+  brew install --cask xquartz
 
   brew install circleci
   brew install clojure
@@ -79,35 +79,35 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
   brew install youtube-dl
   brew install yq
 
-  brew cask install alfred
-  brew cask install calibre
-  brew cask install docker
-  brew cask install eclipse-java
-  brew cask install firefox
-  brew cask install flux
-  brew cask install gimp
-  brew cask install google-chrome
-  brew cask install gpg-suite
-  brew cask install iina
-  brew cask install inkscape
-  brew cask install insomnia
-  brew cask install istat-menus
-  brew cask install java
-  brew cask install kindle
-  brew cask install knockknock
-  brew cask install lulu
-  brew cask install minikube
-  brew cask install phoenix
-  brew cask install postico
-  brew cask install postman
-  brew cask install quip
-  brew cask install sketch
-  brew cask install slack
-  brew cask install soundflower
-  brew cask install telegram
-  brew cask install tunnelblick
-  brew cask install visual-studio-code
-  brew cask install vlc
+  brew install --cask alfred
+  brew install --cask calibre
+  brew install --cask docker
+  brew install --cask eclipse-java
+  brew install --cask firefox
+  brew install --cask flux
+  brew install --cask gimp
+  brew install --cask google-chrome
+  brew install --cask gpg-suite
+  brew install --cask iina
+  brew install --cask inkscape
+  brew install --cask insomnia
+  brew install --cask istat-menus
+  brew install --cask java
+  brew install --cask kindle
+  brew install --cask knockknock
+  brew install --cask lulu
+  brew install --cask minikube
+  brew install --cask phoenix
+  brew install --cask postico
+  brew install --cask postman
+  brew install --cask quip
+  brew install --cask sketch
+  brew install --cask slack
+  brew install --cask soundflower
+  brew install --cask telegram
+  brew install --cask tunnelblick
+  brew install --cask visual-studio-code
+  brew install --cask vlc
 
   brew install zsh
   sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"

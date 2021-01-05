@@ -33,7 +33,7 @@ Plugin 'roryokane/detectindent.git'
 
 Plugin 'godlygeek/tabular.git'
 
-Plugin 'Valloric/YouCompleteMe'
+" Plugin 'Valloric/YouCompleteMe'
 
 Plugin 'scrooloose/nerdtree'
 "Syntax checking/error highlighting
@@ -115,10 +115,10 @@ Bundle 'mattn/gist-vim'
 Plugin 'prettier/vim-prettier'
 
 " Track the engine.
-Plugin 'SirVer/ultisnips'
+" Plugin 'SirVer/ultisnips'
 
 " Snippets are separated from the engine. Add this if you want them:
-Plugin 'honza/vim-snippets'
+" Plugin 'honza/vim-snippets'
 
 " Go Code explorer
 Plugin 'fatih/vim-go'

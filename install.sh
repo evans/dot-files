@@ -49,7 +49,6 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
   brew install go
   brew install gradle
   brew install grip
-  brew install heroku/brew/heroku
   brew install hub
   brew install jq
   brew install leiningen
@@ -68,6 +67,8 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
   brew install yarn
   brew install youtube-dl
   brew install yq
+
+  brew tap heroku/brew && brew install heroku
 
   brew install --cask alfred
   brew install --cask docker

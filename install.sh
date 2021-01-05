@@ -53,11 +53,9 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
   brew install hub
   brew install jq
   brew install leiningen
-  brew install mongodb
   brew install octave
   brew install opam
   brew install openssl
-  brew install postgresql
   brew install pstree
   brew install python3
   brew install rust
@@ -66,16 +64,12 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
   brew install tig
   # code stats
   brew install tokei
-  brew install unrar
-  brew install vim --with-client-server --with-gettext --with-lua --with-python3 --with-tcl --with-override-system-vi
-  brew install vim --with-client-server --with-gettext --with-lua --with-python3 --with-tcl
   brew install wget
   brew install yarn
   brew install youtube-dl
   brew install yq
 
   brew install --cask alfred
-  brew install --cask calibre
   brew install --cask docker
   brew install --cask eclipse-java
   brew install --cask firefox
@@ -87,7 +81,6 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
   brew install --cask inkscape
   brew install --cask insomnia
   brew install --cask istat-menus
-  brew install --cask java
   brew install --cask kindle
   brew install --cask knockknock
   brew install --cask lulu
@@ -104,9 +97,8 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
   brew install --cask visual-studio-code
   brew install --cask vlc
 
-  brew install zsh
   sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-  mv .zshrc.pre-oh-my-zsh .zshrc
+  mv ~/.zshrc.pre-oh-my-zsh ~/.zshrc
 
 fi
 

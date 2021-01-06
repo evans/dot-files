@@ -19,7 +19,7 @@ do
   fi
 done
 
-if ! [ -x "$(command -v nvm)" ]; then
+if ! [ -z "$(command -v nvm)" ]; then
   curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh | bash
 fi
 
@@ -34,7 +34,7 @@ fi
 #install homebrew
 if [[ "$OSTYPE" == "darwin"* ]]; then
   # Mac OSX
-  if ! [ -x "$(command -v brew)" ]; then
+  if ! [ -z "$(command -v brew)" ]; then
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
   fi
 
@@ -109,11 +109,11 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
 fi
 
 #link vscode settings after installing
-if [ hash code 2>/dev/null ]; then
+if ! [ -z "$(command -v code)" ]; then
   ln -Fs "$(pwd)"/vscode/settings.json ~/Library/Application\ Support/Code/User/settings.json
 fi
 
-if [ hash zsh 2>/dev/null ]; then
+if ! [ -z "$(command -v  zsh)" ]; then
   #https://github.com/VundleVim/Vundle.vim
   #Launch vim and run :PluginInstall
   #To install from command line: vim +PluginInstall +qall

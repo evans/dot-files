@@ -103,6 +103,9 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
   sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
   mv ~/.zshrc.pre-oh-my-zsh ~/.zshrc
 
+  # disable press and hold for vscode
+  # https://stackoverflow.com/questions/39972335/how-do-i-press-and-hold-a-key-and-have-it-repeat-in-vscode
+  defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
 fi
 
 #link vscode settings after installing

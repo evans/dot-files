@@ -82,6 +82,7 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
   brew install --cask iina
   brew install --cask inkscape
   brew install --cask insomnia
+  brew install --cask iterm2
   brew install --cask istat-menus
   brew install --cask kindle
   brew install --cask knockknock

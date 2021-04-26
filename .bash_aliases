@@ -15,6 +15,13 @@ alias vi="vim"
 # long with human readable size and all files
 alias ll="ls -lhA"
 
+alias nd="npm run dev"
+alias npd="npm run dev"
+alias npt="npm test"
+alias nps="npm run storybook"
+alias npr="npm r"
+alias mocha="npx mocha"
+
 # generate iso timestamp
 # from https://stackoverflow.com/a/7216394
 alias isodate='date -u +"%Y-%m-%dT%H:%M:%SZ"'
@@ -28,12 +35,16 @@ alias isodate='date -u +"%Y-%m-%dT%H:%M:%SZ"'
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
 alias gs="g s"
+alias gup="g pull"
 
 alias ocamldebug="rlwrap ocamldebug"
 alias ocaml="rlwrap ocaml"
 
 alias gdb="sudo rlwrap --history-filename=$HOME/.${USER}_gdb_command_history gdb -x /Users/evans/.gdbinit"
 
+alias snowsql=/Applications/SnowSQL.app/Contents/MacOS/snowsql
+
+alias runline="~/Documents/work/substackinc/substack/scripts/dev/run-line.sh"
 
 alias cp-packages='rm -r @apollo/federation   ; ln -s /Users/evans/Documents/work/meteor/dev/apollo/server/packages/apollo-federation @apollo/federation ;\
 rm -r @apollo/gateway      ; ln -s /Users/evans/Documents/work/meteor/dev/apollo/server/packages/apollo-gateway @apollo/gateway ;\

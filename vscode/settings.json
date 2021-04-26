@@ -2,13 +2,20 @@
   "vim.disableAnnoyingNeovimMessage": true,
   "emmet.showExpandedAbbreviation": "never",
   "workbench.startupEditor": "newUntitledFile",
-  "workbench.editor.enablePreview": false,
   "reason.diagnostics.tools": ["bsb", "merlin"],
-  "window.zoomLevel": 2,
   "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
   },
   "editor.formatOnSave": true,
+  "[markdown]": {
+    "editor.formatOnSave": false
+  },
+  "[babelrc]": {
+    "editor.formatOnSave": false
+  },
+  "files.associations": {
+    ".babelrc": "babelrc"
+  },
   "vim.commandLineModeKeyBindings": [
     {
       "before": ["W"],
@@ -16,6 +23,52 @@
     }
   ],
   "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["<leader>", "t", "n"], // "Test nearest"
+      "after": [],
+      "commands": [
+        {
+          "command": "runInTerminal.run",
+          "args": {
+            "name": "test-line"
+          }
+        }
+      ]
+    },
+    {
+      "before": ["<leader>", "t", "f"], // "Test file"
+      "after": [],
+      "commands": [
+        {
+          "command": "runInTerminal.run",
+          "args": {
+            "name": "test-file"
+          }
+        }
+      ]
+    },
+    {
+      "before": ["<leader>", "t", "a"], // "Test all"
+      "after": [],
+      "commands": [
+        {
+          "command": "runInTerminal.run",
+          "args": {
+            "name": "test-all"
+          }
+        }
+      ]
+    },
+    {
+      "before": ["<leader>", "f"],
+      "after": [],
+      "command": "dakara-foldplus.levelAtCursor"
+    },
+    {
+      "before": ["<leader>", "u"],
+      "after": [],
+      "command": "dakara-foldplus.levelAtCursor.unfold"
+    },
     {
       "before": ["k"],
       "after": ["g", "k"]
@@ -38,6 +91,7 @@
     "editor.suggest.showClasses": false
   },
   "editor.snippetSuggestions": "bottom",
+  "editor.suggestSelection": "first",
   "cSpell.enabled": false,
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -45,5 +99,15 @@
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "vim.foldfix": true
+  "vim.foldfix": true,
+  "editor.foldingStrategy": "indentation",
+  "eslint.format.enable": true,
+  "vim.useSystemClipboard": true,
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.python"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "window.zoomLevel": 1
 }

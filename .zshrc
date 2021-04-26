@@ -207,3 +207,6 @@ export PATH="/usr/local/opt/python/libexec/bin:$PATH"
 
 export PATH="/usr/local/opt/openjdk/bin:$PATH"
 [ -f "~/.ghcup/env" ] && source "~/.ghcup/env" # ghcup-env
+
+# added by Snowflake SnowSQL installer v1.2
+export PATH=/Applications/SnowSQL.app/Contents/MacOS:$PATH

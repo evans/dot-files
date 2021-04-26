@@ -136,7 +136,7 @@ INSERT_PROMPT="%{$fg_bold[green]%} [% INSERT]%  %{$reset_color%}"
 function zle-line-init zle-keymap-select {
   VIM_PROMPT="${${KEYMAP/vicmd/$NORMAL_PROMPT}/(main|viins)/$INSERT_PROMPT}"
 
-  PROMPT="╭─%{$fg[yellow]%}[%D{%f/%m/%y} %D{%L:%M:%S}] ${user_host} ${current_dir} ${git_branch}
+  PROMPT="╭─%{$fg[yellow]%}[%D{%f/%m/%y} %D{%K:%M:%S}] ${user_host} ${current_dir} ${git_branch}
 ╰─${VIM_PROMPT} ${PR_PROMPT} "
   RPROMPT="${return_code}"
   # PROMPT="${VIM_PROMPT} ${user_host} ${current_dir} ${git_branch} ${PR_PROMPT} "

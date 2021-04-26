@@ -75,3 +75,5 @@
 ; always squash! or fixup!
 [rebase]
 	autosquash = true
+[hub]
+	protocol = ssh
